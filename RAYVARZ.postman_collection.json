@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "7db5035a-fffc-4075-9895-afe7f6b95bb1",
+		"name": "RAYVARZ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sales",
+			"item": [
+				{
+					"name": "Customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "{{rayvarzToken}}",
+								"type": "text"
+							},
+							{
+								"key": "BranchId",
+								"value": "{{rayvarzBranchId}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"CustomerId\": \"91000002\",\n    \"Name\": \"محسن\",\n    \"NameEn\": \"\",\n    \"SalesTypeId\": \"1\",\n    \"RegionId\": \"1\",\n    \"FirstContactDate\": \"\",\n    \"StatusId\": \"1\",\n    \"CustomerGroupId\": \"1\",\n    \"CenterId\": \"32000000\",\n    \"HasDiscount\": \"\",\n    \"DiscountTypeId\": \"\",\n    \"BuyerId\": \"3000000\",\n    \"CountyId\": \"1\",\n    \"Address1\": \"تست تست\",\n    \"Address2\": \"\",\n    \"ZipCode\": \"1234567890\",\n    \"PostBoxNo\": \"1234567890\",\n    \"Tel1\": \"09128858827\",\n    \"Tel2\": \"\",\n    \"Fax\": \"\",\n    \"Email\": \"momenimohsen@gmail.com\",\n    \"SalesPathId\": null,\n    \"Distance\": null,\n    \"RemainingCredit\": null,\n    \"MinimumPurchase\": null,\n    \"MaximumPurchase\": null,\n    \"CreditDiscountAmount\": \"0\",\n    \"CreditDiscountDate\": \"0\",\n    \"ShippingAgentId\": null,\n    \"ManagerName\": \"بازاریابان ایرانیان زمین\",\n    \"TaxCityId\": null,\n    \"TaxMainId\": null,\n    \"TaxSubId\": null,\n    \"FirstName\": \"محسن\",\n    \"LastName\": \"مومنی\",\n    \"FatherName\": \"محمد\",\n    \"BirthCertificateNo\": \"\",\n    \"NationalId\": \"\",\n    \"BirthCertificateSerialNo\": \"\",\n    \"BirthCertificateIssuePlaceId\": \"\",\n    \"EconomicalCode\": \"1\",\n    \"CashId\": \"1\",\n    \"AttachmentId\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rayvarzUrl}}/RayvarzApi/Sales/Customer/",
+							"host": [
+								"{{rayvarzUrl}}"
+							],
+							"path": [
+								"RayvarzApi",
+								"Sales",
+								"Customer",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SaveEntity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{rayvarzUrl}}/RayvarzApi/Sales/Proforma/SaveEntity",
+							"host": [
+								"{{rayvarzUrl}}"
+							],
+							"path": [
+								"RayvarzApi",
+								"Sales",
+								"Proforma",
+								"SaveEntity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SalesFiscalYear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{rayvarzUrl}}/RayvarzApi/Sales/Proforma/SaveEntity",
+							"host": [
+								"{{rayvarzUrl}}"
+							],
+							"path": [
+								"RayvarzApi",
+								"Sales",
+								"Proforma",
+								"SaveEntity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SalesWarehouse",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "{{rayvarzToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{rayvarzUrl}}/RayvarzApi/Sales/SalesWarehouse/List",
+							"host": [
+								"{{rayvarzUrl}}"
+							],
+							"path": [
+								"RayvarzApi",
+								"Sales",
+								"SalesWarehouse",
+								"List"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CurrencyType",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "{{rayvarzToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{rayvarzUrl}}/RayvarzApi/Sales/CurrencyType",
+							"host": [
+								"{{rayvarzUrl}}"
+							],
+							"path": [
+								"RayvarzApi",
+								"Sales",
+								"CurrencyType"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AUTH",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\n       \"userId\": \"999\",\n       \"sha256Str\": \"6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b\"\n}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{rayvarzUrl}}/RayvarzApi/Core/Sso/Authenticate",
+					"host": [
+						"{{rayvarzUrl}}"
+					],
+					"path": [
+						"RayvarzApi",
+						"Core",
+						"Sso",
+						"Authenticate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
