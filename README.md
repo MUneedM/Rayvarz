@@ -1,5 +1,5 @@
 # Rayvarz WebAPi
-<p style='direction:rtl; text-align: right'>
+<div dir="rtl">
 وب سرویس های رایورز
 
 درخواست ها دو مرحله ای هستن 
@@ -14,7 +14,7 @@ rayvarzUrl
 rayvarzToken
 rayvarzBranchId
 
-</p>
+</div>
 
  
 alifattahian@hotmail.com
