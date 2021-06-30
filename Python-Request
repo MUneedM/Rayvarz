@@ -1,0 +1,79 @@
+import requests
+import json
+
+url = "http://---.---.---.---/rayweb-internet//RayvarzApi/Core/Sso/Authenticate"
+
+payload = json.dumps([
+  "---",
+  "---"
+])
+headers = {
+  'Content-Type': 'application/json'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
+
+
+//---------------------------------
+
+import requests
+import json
+
+url = "http://185.42.225.202/rayweb-internet//RayvarzApi/Sales/Customer/"
+
+payload = json.dumps({
+  "CustomerId": "---",
+  "Name": "---",
+  "NameEn": "",
+  "SalesTypeId": "1",
+  "RegionId": "1",
+  "FirstContactDate": "",
+  "StatusId": "1",
+  "CustomerGroupId": "1",
+  "CenterId": "---",
+  "HasDiscount": "",
+  "DiscountTypeId": "",
+  "BuyerId": "---",
+  "CountyId": "1",
+  "Address1": "-----",
+  "Address2": "",
+  "ZipCode": "---",
+  "PostBoxNo": "---",
+  "Tel1": "---",
+  "Tel2": "",
+  "Fax": "",
+  "Email": "---",
+  "SalesPathId": None,
+  "Distance": None,
+  "RemainingCredit": None,
+  "MinimumPurchase": None,
+  "MaximumPurchase": None,
+  "CreditDiscountAmount": "0",
+  "CreditDiscountDate": "0",
+  "ShippingAgentId": None,
+  "ManagerName": "---",
+  "TaxCityId": None,
+  "TaxMainId": None,
+  "TaxSubId": None,
+  "FirstName": "---",
+  "LastName": "---",
+  "FatherName": "---",
+  "BirthCertificateNo": "",
+  "NationalId": "",
+  "BirthCertificateSerialNo": "",
+  "BirthCertificateIssuePlaceId": "",
+  "EconomicalCode": "1",
+  "CashId": "1",
+  "AttachmentId": ""
+})
+headers = {
+  'access_token': '',
+  'BranchId': '3',
+  'Content-Type': 'application/json'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
